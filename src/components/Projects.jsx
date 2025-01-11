@@ -1,77 +1,126 @@
-import React from "react";
+import React, {useRef} from "react";
 import data from "./info.json";
+import Heading from "./Heading";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const Projects = () => {
+  const swiperRef = useRef(null); // Create a reference to Swiper
   const projects = data.Projects || [];
 
   const majorProjects =
     projects.find((item) => item.Major_projects)?.Major_projects || [];
-  const minorProjects =
-    projects.find((item) => item["Minor Projects"])?.["Minor Projects"] || {};
+
+    // Handle hover to stop autoplay
+  const handleMouseEnter = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.autoplay.stop(); // Pause autoplay on hover
+    }
+  };
+
+  // Handle hover end to start autoplay again
+  const handleMouseLeave = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.autoplay.start(); // Resume autoplay after hover
+    }
+  };
 
   return (
-    <section className=" projects-section relative min-h-[120vh]">
-      <div className="px-40 absolute inset-0 -z-10 h-full w-full items-center py-24 [background:radial-gradient(125%_125%_at_80%_10%,#0180a7_20%,#013c36_100%)]">
-        <h2 className="text-3xl font-bold">Projects</h2>
-        <div className="major-projects">
-          <h2 className="text-2xl font-bold mb-4 flex justify-center items-center">Major Projects</h2>
-            {majorProjects.length > 0 ? (
-              majorProjects.map((project, index) => {
-                const projectName = Object.keys(project)[0]; 
-                const projectDetails = project[projectName]; 
-                return (
-                  <div
-                    key={index}
-                    className="flex flex-col justify-center bg-gradient-to-br from-[#013c36] via-[#0180a7] to-black p-4 rounded-lg m-6"
-                  >
-                    <h3 className="text-xl font-semibold">{projectName}</h3>
-                    <p>
-                      <strong>Description:</strong> {projectDetails.Description}
-                    </p>
-                    {projectDetails.Features && (
-                      <p>
-                        <strong>Features:</strong> {projectDetails.Features}
-                      </p>
-                    )}
-                    <p>
-                      <strong>Technologies Used:</strong>{" "}
-                      {projectDetails["Technologies Used"]}
-                    </p>
-                    <p>
-                      <strong>Role:</strong> {projectDetails.Role}
-                    </p>
-                    {projectDetails["GitHub Repo"] && (
-                      <a
-                        href={projectDetails["GitHub Repo"]}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#013e6c] underline"
-                      >
-                        View on GitHub
-                      </a>
-                    )}
-                  </div>
-                );
-              })
-            ) : (
-              <p>No major projects available.</p>
-            )}
-        </div>
-      <div className="minor-projects mt-8 flex flex-col justify-center items-center">
-        <h2 className="text-2xl font-bold mb-4">Minor Projects</h2>
-        {Object.keys(minorProjects).length > 0 ? (
-          <ul className="list-disc ml-6">
-            {Object.entries(minorProjects).map(([key, value], index) => (
-              <li key={index}>{`${key}: ${value}`}</li>
-            ))}
-          </ul>
-        ) : (
-          <p>No minor projects available.</p>
-        )}
-      </div>
-      </div>
+    <section
+      id="projects"
+      className="relative min-h-[120vh] p-40 bg-gradient-to-r from-[#0180a7] via-[#013c36] to-black"
+    >
+      <div className="container mx-auto px-6">
+        <Heading heading="Projects" />
 
-      
+        {/* Major Projects Section */}
+        <div className="all_projects py-20">
+          {majorProjects.length > 0 ? (
+            <Swiper
+              ref={swiperRef}
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView="auto"
+              loop={true}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2.5,
+              }}
+              autoplay={{
+                delay: 4000, // Time between scrolls (in milliseconds)
+                disableOnInteraction: false, // Keep autoplay active after manual interaction
+              }}
+              pagination={{ clickable: true }}
+              navigation={true}
+              modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+              className="swiper_container"
+              onMouseEnter={handleMouseEnter} // Pause autoplay on hover
+              onMouseLeave={handleMouseLeave} // Resume autoplay when hover ends
+            >
+              {majorProjects.map((project, index) => {
+                const projectName = Object.keys(project)[0];
+                const projectDetails = project[projectName];
+                return (
+                  <SwiperSlide key={index} className="relative group">
+                    <div className="relative w-full h-96">
+                      <img
+                        src={projectDetails.Image}
+                        alt={projectName}
+                        className="w-full h-full rounded-lg object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                      {/* Overlay Content */}
+                      <div className="absolute inset-0 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300 rounded-lg flex flex-col items-center justify-center p-4"
+                      >
+                        <h3 className="text-xl font-semibold mb-2">
+                          {projectName}
+                        </h3>
+                        <p className="text-sm mb-2">
+                          <strong>Description:</strong>{" "}
+                          {projectDetails.Description}
+                        </p>
+                        {projectDetails.Features && (
+                          <p className="text-sm mb-2">
+                            <strong>Features:</strong> {projectDetails.Features}
+                          </p>
+                        )}
+                        <p className="text-sm mb-2">
+                          <strong>Technologies Used:</strong>{" "}
+                          {projectDetails["Technologies Used"]}
+                        </p>
+                        <p className="text-sm">
+                          <strong>Role:</strong> {projectDetails.Role}
+                        </p>
+                        {projectDetails["GitHub Repo"] && (
+                          <a
+                            href={projectDetails["GitHub Repo"]}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 underline mt-2"
+                          >
+                            View on GitHub
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          ) : (
+            <p className="text-white text-center">
+              No major projects available.
+            </p>
+          )}
+        </div>
+      </div>
     </section>
   );
 };

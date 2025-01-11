@@ -23,7 +23,8 @@
             "Features": "User authentication, creator dashboards, real-time updates.",
             "Technologies Used": "React.js, Node.js, MongoDB, Express.js.",
             "Role": "Full-stack Developer.",
-            "GitHub Repo": "[Link to GitHub]"
+            "GitHub Repo": "[Link to GitHub]",
+            "Image": "Location Recommendation.png"
           }
         },
         {
@@ -31,19 +32,11 @@
             "Description": "A web application that assists entrepreneurs in identifying high-potential areas for business using clustering algorithms.",
             "Technologies Used": "Python (scikit-learn), Django, MySQL",
             "Role": "Full-stack Developer and Data Analyst.",
-            "GitHub Repo": "[Link to GitHub]"
+            "GitHub Repo": "[Link to GitHub]",
+            "Image": "Location Recommendation.png"
           }
-        }
+        }   
       ]
-    },
-    {
-      "Minor Projects": {
-        "1st": "Password Manager" ,
-        "2nd": "Spotify Clone" ,
-        "3rd": "Twitter Clone",
-        "4th": "TodoList" ,
-        "5th": "Exercise Reminder"
-      }
     }
   ],
   "Skills": [
