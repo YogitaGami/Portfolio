@@ -6,11 +6,11 @@ const About = () => {
   return (
     <section
       id="about"
-      className="p-40 flex flex-row justify-center items-center gap-12 min-h-screen bg-gradient-to-br from-[#013c36] via-[#013e6c] to-black"
+      className="px-40 py-24 flex flex-row justify-center items-center gap-12 min-h-[90vh] bg-gradient-to-br from-[#013c36] via-[#013e6c] to-black"
     >
       <div className="w-4/5">
-        <Heading heading="About Me"/>
-        <p className="mt-8 text-xl">{data.About.Heading}</p>
+        <Heading heading="About" reason="Full Stack Developer"/>
+        <p className="text-xl">{data.About.Heading}</p>
         <div className="text-2xl font-semibold mt-4">Skills Summary:</div>
         <ul className="text-xl mt-5 mb-10">
           <li className="my-3">
@@ -37,7 +37,7 @@ const About = () => {
         <Button title="Download Resume" link="" />
       </div>
       <div className="w-1/3 ml-32">
-        <img className="rounded-xl shadow-[#013e6c] shadow-[15px_10px_2px_rgba(0,0,0,0.3)]" src="Yogita photo.jpg" alt="" />
+        <img className="rounded-xl shadow-[#013e6c] shadow-[15px_10px_2px_rgba(0,0,0,0.3)]" src="src/assets/image/Yogita photo.jpg" alt="" />
       </div>
     </section>
   );

@@ -33,13 +33,13 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative min-h-[120vh] p-40 bg-gradient-to-r from-[#0180a7] via-[#013c36] to-black"
+      className="relative min-h-[90vh] px-40 py-24 bg-gradient-to-r from-[#0180a7] via-[#013c36] to-black"
     >
       <div className="container mx-auto px-6">
-        <Heading heading="Projects" />
+        <Heading heading="Projects" reason="Check My Wonderful Works" />
 
         {/* Major Projects Section */}
-        <div className="all_projects py-20">
+        <div className="all_projects">
           {majorProjects.length > 0 ? (
             <Swiper
               ref={swiperRef}
@@ -103,7 +103,7 @@ const Projects = () => {
                             href={projectDetails["GitHub Repo"]}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-500 underline mt-2"
+                            className="text-[#0180a7] underline mt-2"
                           >
                             View on GitHub
                           </a>
@@ -126,3 +126,4 @@ const Projects = () => {
 };
 
 export default Projects;
+        {/* <div class="absolute h-full w-full bg-[radial-gradient(#013c36_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#013c36_70%,transparent_80%)]"></div> */}
