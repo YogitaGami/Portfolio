@@ -1,5 +1,5 @@
 import React from "react";
-import data from "./info.json";
+import data from "../data/info.json";
 import Button from "./Button";
 
 const Hero = () => {
@@ -13,14 +13,14 @@ const Hero = () => {
         {/* Black overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       </div>
-      <div className="relative  min-h-screen flex flex-col justify-center items-center text-center mx-80 ">
-        <h2 className="text-4xl md:text-6xl font-bold">{data.Hero.Title}</h2>
-        <p className="text-3xl mt-8">{data.Hero.Tagline}</p>
-        <p className="text-xl mt-6">{data.Hero.Introduction}</p>
-        <div className="flex flex-row justify-center items-center gap-32 pt-20">
+      <div className="relative min-h-screen flex flex-col justify-center items-center text-center mx-10 md:mx-20 lg:mx-80 ">
+        <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold">{data.Hero.Title}</h2>
+        <p className="text-xl md:text-2xl lg:text-3xl mt-6 md:mt-8">{data.Hero.Tagline}</p>
+        <p className="text-base md:text-lg lg:text-xl mt-4 md:mt-6">{data.Hero.Introduction}</p>
+        <div className="flex flex-row  flex-wrap justify-center items-center gap-14 md:gap-20 lg:gap-32 pt-10 md:pt-20">
           <Button title="Veiw Projects" link="#projects" />
           <Button title="Hire Me" link="#contact" />
-          <Button title="Download Resume" link="" />
+          <a href="src/assets/document/resume.pdf" download><Button title="Download Resume"/></a>
         </div>
       </div>
     </section>

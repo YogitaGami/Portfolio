@@ -1,0 +1,97 @@
+{
+  "Hero": {
+    "Title": "Hi, I'm Yogita Gami",
+    "Tagline": "An Aspiring MERN Stack Developer with a passion for creating innovative web applications.",
+    "Introduction": "I specialize in building full-stack applications using MongoDB, Express.js, React.js, and Node.js. My journey in tech is fueled by curiosity and a desire to solve real-world problems through code."
+  },
+  "About": {
+    "Heading": "I am a Master of Science graduate in Computer Science with Data Science, scoring an SGPA of 8.86 from Vikram University, Ujjain. Over the years, I have honed my skills in full-stack development, data visualization, and machine learning."
+  },
+  "Skills_Summary": {
+    "Programming_Languages": "JavaScript, Python, Java, C++, C",
+    "Libraries_and_Frameworks": "React.js, Tailwind CSS, Express.js, Next.js, Django",
+    "Databases": "MongoDB, MySQL",
+    "Tools": "Git, GitHub",
+    "API_Development": "REST API"
+  },
+  "Projects": [
+    {
+      "Major_projects": [
+        {
+          "GetMeAChai": {
+            "Description": "A Patreon-like platform built with the MERN stack and Next.js, enabling content creators to monetize their work.",
+            "Features": "User authentication, creator dashboards, real-time updates, Fund creators directly to support their content",
+            "Technologies Used": "React.js, Next.js, Tailwind CSS, Post CSS, Razorpay, MongoDB",
+            "Role": "Full-Stack Developer",
+            "GitHub Repo": "https://github.com/YogitaGami/GetMeAChai",
+            "Image": "src/assets/image/GetMeAChai Web Shot.png"
+          }
+        },
+        {
+          "Business Location Recommendation System": {
+            "Description": "A web application that assists entrepreneurs in identifying high-potential areas for business using clustering algorithms.",
+            "Features": "User Authentication, Business Insights, Location Identification, Interactive Mapping",
+            "Technologies Used": "Python (scikit-learn), Geopy, Foursquare API, Folium, Django, MySQL",
+            "Role": "Full-Stack Developer and Data Analyst",
+            "GitHub Repo": "https://github.com/YogitaGami/Business-Location-Recommendation-System",
+            "Image": "src/assets/image/Location Recommendation Web Shot.png"
+          }
+        },
+        {
+          "Password Manager":{
+          "Description": "A secure web application for managing and storing user credentials with an intuitive interface and encrypted backend.",
+          "Features": "Manage passwords, Real-time notifications, Encrypted password storage",
+          "Technologies Used": " React.js, Vite, Tailwind CSS, Node.js, Express.js, Mongoose",
+          "Role": "Full-Stack Developer",
+          "GitHub Repo": "https://github.com/YogitaGami/Password-Manager",
+          "Image": "src/assets/image/Password Manager Web Shot.png"
+          }
+        },
+        {
+          "TodoList":{
+          "Description": "A task management application that allows users to organize and manage their daily tasks effectively.",
+          "Features":"Task management with CRUD operations, Task completion marking, Persistent storage using local storage",
+          "Technologies Used": "React.js, Tailwind CSS, Local Storage",
+          "Role": "Frontend Developer",
+          "GitHub Repo": "[Link to GitHub]",
+          "Image": "src/assets/image/TodoList Web Shot.png"
+          }
+        },
+        {
+          "Spotify":{
+          "Description": "A visually appealing Spotify-inspired music streaming web application designed to mimic Spotify's interface and functionalities.",
+          "Features":"Playlist sections,Dynamic album display for user interaction, Responsive design",
+          "Technologies Used": "HTML, CSS, JavaScript",
+          "Role": "Frontend Developer",
+          "GitHub Repo": "[Link to GitHub]",
+          "Image": "src/assets/image/Spotify Web Shot.png"
+          }
+        },
+        {
+          "Twitter":{
+          "Description": "A visually accurate clone of the Twitter interface, designed to replicate its layout and responsiveness.",
+          "Features":"Fully responsive design, Interactive hover effects and transitions",
+          "Technologies Used": "HTML, Tailwind CSS",
+          "Role": "Frontend Developer",
+          "GitHub Repo": "[Link to GitHub]",
+          "Image": "src/assets/image/Twitter Clone Web Shot.png"
+          }
+        }
+      ]
+    }
+  ],
+  "Skills": {
+    "HTML": "90%",
+    "CSS": "85%",
+    "React JS": "88%",
+    "Redux" : "60%",
+    "JavaScript": "75%",
+    "Node JS": "80%",
+    "Express JS": "70%",
+    "Next JS" : "60%",
+    "MongoDB": "78%",
+    "MySQL": "80%",
+    "GIT" : "70%",
+    "Python" : "89%"
+  }
+}
