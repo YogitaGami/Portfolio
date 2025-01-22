@@ -1,6 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import Heading from "./Heading";
+import location_icon from "../assets/image/location.svg"
+import phone_icon from "../assets/image/phone.svg"
+import mail_icon from "../assets/image/mail.svg"
 
 const Contact = () => {
   const {
@@ -89,21 +92,21 @@ const Contact = () => {
         </form>
         <div className="relative w-[90%] md:w-[40%]">
           <div className="flex flex-row items-center gap-4 sm:gap-6 mb-2 sm:mb-4">
-            <img className="icon size-7 sm:size-9 p-1 border-[1px] sm:border-[3px] rounded-full border-cyan-300" src="src/assets/image/location.svg"></img>
+            <img className="icon size-7 sm:size-9 p-1 border-[1px] sm:border-[3px] rounded-full border-cyan-300" src={location_icon}></img>
             <div className="content">
               <h3 className="heading text-lg md:text-xl lg:text-2xl pb-1">Location</h3>
               <div className="info text-base md:text-lg">Ujjain, Madhya Pradesh</div>
             </div>
           </div>
           <div className="flex flex-row items-center gap-4 sm:gap-6 mb-2 sm:mb-4">
-            <img className="icon size-7 sm:size-9 p-1 border-[1px] sm:border-[3px] rounded-full border-cyan-300" src="src/assets/image/phone.svg"></img>
+            <img className="icon size-7 sm:size-9 p-1 border-[1px] sm:border-[3px] rounded-full border-cyan-300" src={phone_icon}></img>
             <div className="content">
               <h3 className="heading text-lg md:text-xl lg:text-2xl pb-1">Phone Number</h3>
               <div className="info text-base md:text-lg">&#40;+91&#41; 9340102726</div>
             </div>
           </div>
           <div className="flex flex-row items-center gap-4 sm:gap-6 mb-2 sm:mb-4">
-            <img className="icon size-7 sm:size-9 p-1 border-[1px] sm:border-[3px] rounded-full border-cyan-300" src="src/assets/image/mail.svg"></img>
+            <img className="icon size-7 sm:size-9 p-1 border-[1px] sm:border-[3px] rounded-full border-cyan-300" src={mail_icon}></img>
             <div className="content">
               <h3 className="heading text-lg md:text-xl lg:text-2xl pb-1">Email Address</h3>
               <div className="info text-base md:text-lg">yogitagamimak@gmail.com</div>

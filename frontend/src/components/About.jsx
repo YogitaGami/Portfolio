@@ -2,6 +2,10 @@ import React from "react";
 import data from "../data/info.json";
 import Button from "./Button";
 import Heading from "./Heading";
+import resume from "../assets/document/resume.pdf"
+import Yogita_photo from "../assets/image/Yogita photo.jpg"
+import linkedin_icon from "../assets/image/linkedin-in.svg"
+import github_icon from "../assets/image/github.svg"
 const About = () => {
   return (
     <section
@@ -35,13 +39,13 @@ const About = () => {
             {data.Skills_Summary.API_Development}
           </li>
         </ul>
-        <a href="src/assets/document/resume.pdf" download><Button title="Download Resume"/></a>
+        <a href={resume} download><Button title="Download Resume"/></a>
       </div>
       <div className="w-full md:order-2 order-1">
-        <img className="rounded-xl mx-auto shadow-[#013e6c] shadow-[15px_10px_2px_rgba(0,0,0,0.3)] transition-all hover:opacity-30 hover:rotate-3" src="src/assets/image/Yogita photo.jpg" alt="" />
+        <img className="rounded-xl mx-auto shadow-[#013e6c] shadow-[15px_10px_2px_rgba(0,0,0,0.3)] transition-all hover:opacity-30 hover:rotate-3" src={Yogita_photo} alt="" />
       <div className="flex gap-x-5 justify-center mt-5">
-        <a href="http://linkedin.com/in/yogita-gami257" target="blank"><img className="size-7" src="src/assets/image/linkedin-in.svg" alt="" /></a>
-        <a href="http://github.com/YogitaGami" target="blank"><img className="size-7" src="src/assets/image/github.svg" alt="" /></a>
+        <a href="http://linkedin.com/in/yogita-gami257" target="blank"><img className="size-7" src={linkedin_icon} alt="" /></a>
+        <a href="http://github.com/YogitaGami" target="blank"><img className="size-7" src={github_icon} alt="" /></a>
       </div>
       </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import data from "../data/info.json";
 import Button from "./Button";
+import resume from "../assets/document/resume.pdf"
 
 const Hero = () => {
   return (
@@ -20,7 +21,7 @@ const Hero = () => {
         <div className="flex flex-row  flex-wrap justify-center items-center gap-14 md:gap-20 lg:gap-32 pt-10 md:pt-20">
           <Button title="Veiw Projects" link="#projects" />
           <Button title="Hire Me" link="#contact" />
-          <a href="src/assets/document/resume.pdf" download><Button title="Download Resume"/></a>
+          <a href={resume} download><Button title="Download Resume"/></a>
         </div>
       </div>
     </section>

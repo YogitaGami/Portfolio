@@ -5,7 +5,7 @@ const Services = () => {
   const servicesData =[
     {
       "id": 1,
-      "image": "src/assets/image/image1.png",
+      "image": "/image1.png",
       "title": "Frontend Developer",
       "styles": {
         "container": "lg:w-72 lg:h-[12.5rem] md:w-48 md:h-[7rem]",
@@ -14,7 +14,7 @@ const Services = () => {
     },
     {
       "id": 2,
-      "image": "src/assets/image/image2.jpg",
+      "image": "/image2.jpg",
       "title": "Full Stack Developer",
       "styles": {
         "container": "lg:w-72 lg:h-[9.5rem] md:w-44 md:h-[5.5rem]",
@@ -23,7 +23,7 @@ const Services = () => {
     },
     {
       "id": 3,
-      "image": "src/assets/image/image3.jpg",
+      "image": "/image3.jpg",
       "title": "React Developer",
       "styles": {
         "container": "lg:w-64 lg:h-[15rem] md:w-44 md:h-[9rem]",
@@ -32,7 +32,7 @@ const Services = () => {
     },
     {
       "id": 4,
-      "image": "src/assets/image/image4.jpg",
+      "image": "/image4.jpg",
       "title": "Node Developer",
       "styles": {
         "container": "lg:w-72 md:w-48 lg:h-[17.7rem] md:h-[12.6rem] md:row-start-3",
@@ -41,7 +41,7 @@ const Services = () => {
     },
     {
       "id": 5,
-      "image": "src/assets/image/image5.png",
+      "image": "/image5.png",
       "title": "Web Designer",
       "styles": {
         "container": "lg:w-72 md:w-48 lg:h-[20.7rem] md:h-[14.4rem] md:col-start-2 md:row-start-2",
@@ -50,7 +50,7 @@ const Services = () => {
     },
     {
       "id": 6,
-      "image": "src/assets/image/image6.png",
+      "image": "/image6.png",
       "title": "Backend Developer",
       "styles": {
         "container": "lg:w-64 lg:h-[15rem] md:w-44 md:h-[11rem] md:col-start-3 md:row-start-5",
@@ -68,14 +68,18 @@ const Services = () => {
       <div className="absolute inset-0 -z-10 h-full w-full items-center [background:radial-gradient(125%_125%_at_80%_10%,#0180a7_20%,#013c36_100%)] pointer-events-none"></div>
       <Heading heading="Services" reason="What I do" />
       <div className="relative m-auto grid sm:grid-cols-2 md:grid-cols-custom grid-cols-1 grid-rows-6 sm:grid-rows-3 md:grid-rows-custom lg:gap-5 md:gap-2 gap-8 sm:w-[22.8rem] justify-center">
-        {servicesData.map((service) => (
+        {servicesData.map((service) => {
+          const imageUrl = `${service.image}`;
+          console.log(imageUrl)
+
+          return (
           <div
             key={service.id}
             className={`relative z-10 group w-40 h-[8rem] ${service.styles.container}`}
           >
             <img
               className={`absolute w-full h-full object-fill rounded-lg object-top transition-transform duration-500 group-hover:scale-105 hover:border hover:border-cyan-500 m-auto`}
-              src={service.image}
+              src={imageUrl}
               alt={service.title}
             />
             <div
@@ -84,7 +88,8 @@ const Services = () => {
               {service.title}
             </div>
           </div>
-        ))}
+          )
+        })}
       </div>
     </section>
   );
