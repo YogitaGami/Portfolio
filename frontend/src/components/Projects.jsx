@@ -70,6 +70,8 @@ const Projects = () => {
               {majorProjects.map((project, index) => {
                 const projectName = Object.keys(project)[0];
                 const projectDetails = project[projectName];
+                const Image = new URL(`${projectDetails.Image}`, import.meta.url).href;
+                console.log(Image)
                 return (
                   <SwiperSlide key={index} className="relative group"
                   onMouseEnter={handleMouseEnter} // Pause autoplay on hover
@@ -77,7 +79,7 @@ const Projects = () => {
                      {/* Resume autoplay when hover ends */}
                     <div className="relative w-full h-96">
                       <img
-                        src={projectDetails.Image}
+                        src={Image}
                         alt={projectName}
                         className="w-full h-full rounded-lg object-cover object-top transition-transform duration-500 group-hover:scale-105"
                       />

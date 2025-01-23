@@ -24,7 +24,7 @@
             "Technologies Used": "React.js, Next.js, Tailwind CSS, Post CSS, Razorpay, MongoDB",
             "Role": "Full-Stack Developer",
             "GitHub Repo": "https://github.com/YogitaGami/GetMeAChai",
-            "Image": "src/assets/image/GetMeAChai Web Shot.png"
+            "Image": "/GetMeAChai Web Shot.png"
           }
         },
         {
@@ -34,7 +34,7 @@
             "Technologies Used": "Python (scikit-learn), Geopy, Foursquare API, Folium, Django, MySQL",
             "Role": "Full-Stack Developer and Data Analyst",
             "GitHub Repo": "https://github.com/YogitaGami/Business-Location-Recommendation-System",
-            "Image": "src/assets/image/Location Recommendation Web Shot.png"
+            "Image": "/Location Recommendation Web Shot.png"
           }
         },
         {
@@ -44,7 +44,7 @@
           "Technologies Used": " React.js, Vite, Tailwind CSS, Node.js, Express.js, Mongoose",
           "Role": "Full-Stack Developer",
           "GitHub Repo": "https://github.com/YogitaGami/Password-Manager",
-          "Image": "src/assets/image/Password Manager Web Shot.png"
+          "Image": "/Password Manager Web Shot.png"
           }
         },
         {
@@ -54,7 +54,7 @@
           "Technologies Used": "React.js, Tailwind CSS, Local Storage",
           "Role": "Frontend Developer",
           "GitHub Repo": "[Link to GitHub]",
-          "Image": "src/assets/image/TodoList Web Shot.png"
+          "Image": "/TodoList Web Shot.png"
           }
         },
         {
@@ -64,7 +64,7 @@
           "Technologies Used": "HTML, CSS, JavaScript",
           "Role": "Frontend Developer",
           "GitHub Repo": "[Link to GitHub]",
-          "Image": "src/assets/image/Spotify Web Shot.png"
+          "Image": "/Spotify Web Shot.png"
           }
         },
         {
@@ -74,7 +74,7 @@
           "Technologies Used": "HTML, Tailwind CSS",
           "Role": "Frontend Developer",
           "GitHub Repo": "[Link to GitHub]",
-          "Image": "src/assets/image/Twitter Clone Web Shot.png"
+          "Image": "/Twitter Clone Web Shot.png"
           }
         }
       ]
