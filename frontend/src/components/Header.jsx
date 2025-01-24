@@ -44,14 +44,14 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed z-20 w-full flex sm:justify-between max-sm:justify-around justify-normal items-center p-2 md:p-4 lg:p-6 bg-gradient-to-br from-[#013c36] via-[#0180a7] to-black text-[#0ffbfd]">
-      <h1 className="text-sm md:text-xl lg:text-2xl font-bold text-[#3ac0c3]">My Portfolio</h1>
+    <header className="fixed z-20 w-full flex justify-between max-sm:flex-wrap max-sm:justify-center items-center p-2 md:p-4 lg:p-6 bg-gradient-to-br from-[#013c36] via-[#0180a7] to-black text-[#0ffbfd]">
+      <h1 className="text-lg md:text-xl lg:text-2xl font-bold text-[#3ac0c3]">My Portfolio</h1>
       <nav>
       {sections.map((section) => (
             <button
               key={section.id}
               onClick={() => scrollToSection(section.id)}
-              className={`px-1 md:px-2 lg:px-4 py-0.5 md:py-1 lg:py-2 text-xs md:text-sm lg:text-base text-[#3cb1b3] hover:text-[#0ffbfd] ${
+              className={`px-1 sm:px-2 lg:px-4 py-0.5 md:py-1 lg:py-2 text-xs sm:text-sm lg:text-base text-[#3cb1b3] hover:text-[#0ffbfd] ${
                 activeSection === section.id
                   ? "font-bold text-xs md:text-sm lg:text-base text-[#0180a7] border-b-[1px] lg:border-b-2 border-black"
                   : ""

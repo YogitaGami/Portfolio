@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        'max-sm': { max: '639px' },
+        'max-sm': { max: '389px' },
       },
       gridTemplateRows: {
         'custom': '152px 28px 3px 1px 230px', // Custom row heights

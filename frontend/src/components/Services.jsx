@@ -67,7 +67,7 @@ const Services = () => {
     >
       <div className="absolute inset-0 -z-10 h-full w-full items-center [background:radial-gradient(125%_125%_at_80%_10%,#0180a7_20%,#013c36_100%)] pointer-events-none"></div>
       <Heading heading="Services" reason="What I do" />
-      <div className="relative m-auto grid sm:grid-cols-2 md:grid-cols-custom grid-cols-1 grid-rows-6 sm:grid-rows-3 md:grid-rows-custom lg:gap-5 md:gap-2 gap-8 sm:w-[22.8rem] justify-center">
+      <div className="relative m-auto grid grid-cols-2 md:grid-cols-custom grid-rows-3 md:grid-rows-custom lg:gap-5 md:gap-2 gap-4 sm:w-[22.8rem] max-sm:w-[16rem] justify-center">
         {servicesData.map((service) => {
           const imageUrl = `${service.image}`;
           console.log(imageUrl)
@@ -75,7 +75,7 @@ const Services = () => {
           return (
           <div
             key={service.id}
-            className={`relative z-10 group w-40 h-[8rem] ${service.styles.container}`}
+            className={`relative z-10 group w-28 h-[5rem] sm:w-40 sm:h-[8rem] ${service.styles.container}`}
           >
             <img
               className={`absolute w-full h-full object-fill rounded-lg object-top transition-transform duration-500 group-hover:scale-105 hover:border hover:border-cyan-500 m-auto`}
@@ -83,7 +83,7 @@ const Services = () => {
               alt={service.title}
             />
             <div
-              className={`absolute text-sm md:text-base w-full h-full m-auto inset-0 bg-black bg-opacity-70 text-cyan-300 opacity-0 group-hover:opacity-100 transition-transform duration-500 delay-0 group-hover:scale-125 rounded-lg flex justify-center items-center ${service.styles.text}`}
+              className={`absolute text-[10px] md:text-base w-[5.8rem] h-[4.1rem] sm:w-32 sm:h-[6.4rem] m-auto inset-0 bg-black bg-opacity-70 text-cyan-300 opacity-0 group-hover:opacity-100 transition-transform duration-500 delay-0 group-hover:scale-125 rounded-lg flex justify-center items-center ${service.styles.text}`}
             >
               {service.title}
             </div>

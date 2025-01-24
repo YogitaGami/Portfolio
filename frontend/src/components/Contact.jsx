@@ -12,9 +12,9 @@ const Contact = () => {
     formState: { errors, isSubmitting },
   } = useForm();
   const onSubmit = async(data) =>{
-    let r= await fetch("http://localhost:3000/", {method: "POST", body: JSON.stringify(data)})
-    console.log(JSON.stringify(data));
-    let res = await r.text()
+    let r= await fetch("http://localhost:3000/", {method: "POST",headers: { "Content-Type": "application/json" }, body: JSON.stringify(data)})
+    let res = await r.json()
+    console.log(res);
   } 
 
   return (
@@ -22,11 +22,11 @@ const Contact = () => {
       id="contact"
       className="relative min-h-fit bg-[#01393c] overflow-hidden"
     >
-      <div class="absolute bottom-0 left-[-20%] md:left-[-15%] right-0 top-[-12%] md:top-[-25%] md:h-[500px] h-[300px] md:w-[500px] w-[300px] rounded-full bg-[radial-gradient(circle_farthest-side,#076f7496,rgba(255,255,255,0))]"></div>
-      <div class="absolute bottom-0 -right-28  md:-right-52 top-[-16%] md:top-[-25%] md:h-[500px] h-[300px] md:w-[500px] w-[300px] rounded-full bg-[radial-gradient(circle_farthest-side,#076f7496,rgba(255,255,255,0))]"></div>
-      <div class="absolute bottom-0 left-[-12%] md:left-[-15%] right-0 top-[80%] md:top-[60%] md:h-[500px] h-[300px] md:w-[500px] w-[300px] rounded-full bg-[radial-gradient(circle_farthest-side,#076f7496,rgba(255,255,255,0))]"></div>
-      <div class="absolute bottom-0 -right-20  md:-right-52 top-[80%] md:top-[60%] h-[300px] md:h-[500px] md:w-[500px] w-[300px] rounded-full bg-[radial-gradient(circle_farthest-side,#076f7496,rgba(255,255,255,0))]"></div>
-      <div class="absolute h-full w-full bg-[radial-gradient(#06695f_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#013c36_70%,transparent_80%)]"></div>
+      <div className="absolute bottom-0 left-[-20%] md:left-[-15%] right-0 top-[-12%] md:top-[-25%] md:h-[500px] h-[300px] md:w-[500px] w-[300px] rounded-full bg-[radial-gradient(circle_farthest-side,#076f7496,rgba(255,255,255,0))]"></div>
+      <div className="absolute bottom-0 -right-28  md:-right-52 top-[-16%] md:top-[-25%] md:h-[500px] h-[300px] md:w-[500px] w-[300px] rounded-full bg-[radial-gradient(circle_farthest-side,#076f7496,rgba(255,255,255,0))]"></div>
+      <div className="absolute bottom-0 left-[-12%] md:left-[-15%] right-0 top-[80%] md:top-[60%] md:h-[500px] h-[300px] md:w-[500px] w-[300px] rounded-full bg-[radial-gradient(circle_farthest-side,#076f7496,rgba(255,255,255,0))]"></div>
+      <div className="absolute bottom-0 -right-20  md:-right-52 top-[80%] md:top-[60%] h-[300px] md:h-[500px] md:w-[500px] w-[300px] rounded-full bg-[radial-gradient(circle_farthest-side,#076f7496,rgba(255,255,255,0))]"></div>
+      <div className="absolute h-full w-full bg-[radial-gradient(#06695f_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#013c36_70%,transparent_80%)]"></div>
       <div className="pt-12 md:pt-16 lg:pt-24 pl-9 sm:pl-12 md:pl-28 lg:pl-40">
         <Heading heading="Contact" reason="Get In Touch With Me" />
       </div>
@@ -86,7 +86,7 @@ const Contact = () => {
               type="submit"
               disabled={isSubmitting}
               value="Send Message"
-              className="mt-4 md:mt-6 lg:mt-8 px-2 md:px-4 lg:px-6 py-2 lg:py-3 bg-gradient-to-br from-[#013c36] via-[#0180a7] to-black text-[#0ffbfd] rounded-xl hover:border-[#0ffbfd] border-[1px] border-x-[#0ffbfd] border-y-[#00577e] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              className="max-sm:text-[10px] sm:text-xs md:text-sm text-base max-sm:mt-2 sm:mt-4 md:mt-6 lg:mt-8 px-1 sm:px-2 md:px-4 lg:px-6 py-1 sm:py-2 lg:py-3 bg-gradient-to-br from-[#013c36] via-[#0180a7] to-black text-[#0ffbfd] rounded-lg md:rounded-xl hover:border-[#0ffbfd] border-[1px] border-x-[#0ffbfd] border-y-[#00577e] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
         </form>

@@ -71,7 +71,6 @@ const Projects = () => {
                 const projectName = Object.keys(project)[0];
                 const projectDetails = project[projectName];
                 const Image = new URL(`${projectDetails.Image}`, import.meta.url).href;
-                console.log(Image)
                 return (
                   <SwiperSlide key={index} className="relative group"
                   onMouseEnter={handleMouseEnter} // Pause autoplay on hover
@@ -120,6 +119,93 @@ const Projects = () => {
                   </SwiperSlide>
                 );
               })}
+              {/* Custom Styling for Navigation Arrows */}
+              <style jsx>{`
+                /* Style the pagination dots */
+                .swiper-pagination-bullet {
+                  width: 6px; /* Default size of pagination dots */
+                  height: 6px;
+                  background-color: #0180a7; /* Default color of pagination dots */
+                  transition: background-color 0.3s, transform 0.3s;
+                }
+
+                .swiper-pagination-bullet-active {
+                  background-color: #0180a7; /* Active pagination color */
+                  transform: scale(1.2); /* Scale active dots */
+                }
+
+                .swiper-pagination-bullet:hover {
+                  background-color: #013c36; /* Hover color for pagination dots */
+                  transform: scale(1.2); /* Scale effect on hover */
+                }
+
+                /* Style the previous and next buttons */
+                .swiper-button-prev,
+                .swiper-button-next {
+                  width: 20px; /* Default size of the arrows */
+                  height: 20px;
+                  transition: transform 0.3s, color 0.3s;
+                }
+
+                /* Hover effect for arrows */
+                .swiper-button-prev:hover,
+                .swiper-button-next:hover {
+                  transform: scale(1.2); /* Arrow scale effect on hover */
+                }
+
+                .swiper-button-prev {
+                  background-image: url("/arrow-backward.svg");
+                  background-repeat: no-repeat;
+                }
+
+                .swiper-button-next {
+                  background-image: url("/arrow-forward.svg");
+                  background-repeat: no-repeat;
+                  
+                }
+
+                .swiper-button-next::after,
+                .swiper-button-prev::after {
+                  content: "";
+                }
+
+
+                /* For medium screens (sm, 640px to 768px) */
+                @media (min-width: 640px) and (max-width: 768px) {
+                  .swiper-button-prev,
+                  .swiper-button-next {
+                    width: 25px; /* Medium arrows for sm screens */
+                    height: 25px;
+                    background-size: 25px
+                  }
+                }
+
+                /* For large screens (md, 768px to 1024px) */
+                @media (min-width: 768px) and (max-width: 1024px) {
+                  .swiper-button-prev,
+                  .swiper-button-next {
+                    width: 30px; /* Default size for md screens */
+                    height: 30px;
+                    background-size: 30px
+                  }
+                }
+
+                /* For extra-large screens (lg, above 1024px) */
+                @media (min-width: 1024px) {
+                  .swiper-button-prev,
+                  .swiper-button-next {
+                    width: 35px; /* Larger arrows for lg screens */
+                    height: 35px;
+                    background-size: 35px
+                  }
+
+                  .swiper-pagination-bullet {
+                    width: 12px; /* Larger pagination dots */
+                    height: 12px;
+                  }
+                }
+              `}</style>
+
             </Swiper>
           ) : (
             <p className="text-white text-center">

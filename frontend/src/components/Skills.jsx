@@ -30,14 +30,14 @@ const Skills = () => {
   
   return (
     <section id="skills" className="skills-section relative min-h-fit px-9 sm:px-12 md:px-28 lg:px-40 py-12 md:py-16 lg:py-24">
-      <div class="absolute inset-0 -z-10 h-full w-full bg-[#0180a7] bg-[linear-gradient(to_right,#1d7ba5_1px,transparent_1px),linear-gradient(to_bottom,#1d7ba5_1px,transparent_1px)] bg-[size:14px_24px]">
-        <div class="absolute left-0 right-0 top-44 -z-10 m-auto h-[600px] sm:h-[680px] md:h-[790px] w-[320px] sm:w-[450px] md:w-[768px] rounded-full bg-cyan-950 blur-[150px]"></div></div>
+      <div className="absolute inset-0 -z-10 h-full w-full bg-[#0180a7] bg-[linear-gradient(to_right,#1d7ba5_1px,transparent_1px),linear-gradient(to_bottom,#1d7ba5_1px,transparent_1px)] bg-[size:14px_24px]">
+        <div className="absolute left-0 right-0 top-44 -z-10 m-auto h-[600px] sm:h-[680px] md:h-[790px] w-[320px] max-sm:w-[200px] sm:w-[450px] md:w-[768px] rounded-full bg-cyan-950 blur-[150px]"></div></div>
         <Heading heading="Skills" reason="Why Choose me" />
-        <div ref={skillsRef} className="flex flex-wrap justify-center gap-x-20 gap-y-4 md:gap-y-10">
+        <div ref={skillsRef} className="flex flex-wrap justify-center gap-x-5 sm:gap-x-10 md:gap-x-5 lg:gap-x-20 gap-y-2 sm:gap-y-4 md:gap-y-10">
           {Object.entries(skills).map(([skill, percentage]) => (
             <div className=" items-center group">
-              <span className="w-24 pr-1 text-xl font-semibold">{skill}</span>
-              <div className="relative w-[20rem]  md:w-[28rem] mt-2 h-1 bg-cyan-900 rounded-xl">
+              <span className="w-24 pr-1 text-lg md:text-xl font-semibold">{skill}</span>
+              <div className="relative w-[20rem] sm:w-[14rem] max-sm:w-[16rem] md:w-[16rem] lg:w-[28rem] mt-1 md:mt-2 h-1 bg-cyan-900 rounded-xl">
                 <div
                   className="absolute bg-cyan-500 h-1 rounded-l-xl transition-all duration-700 ease-out "
                   style={{
