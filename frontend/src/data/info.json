@@ -24,7 +24,8 @@
             "Technologies Used": "React.js, Next.js, Tailwind CSS, Post CSS, Razorpay, MongoDB",
             "Role": "Full-Stack Developer",
             "GitHub Repo": "https://github.com/YogitaGami/GetMeAChai",
-            "Image": "/GetMeAChai Web Shot.png"
+            "Desktop Image": "/Desktop/GetMeAChai Web Shot.png",
+            "Mobile Image" : "/Mobile/GetMeAChai%20Web%20Shot.png"
           }
         },
         {
@@ -34,7 +35,8 @@
             "Technologies Used": "Python (scikit-learn), Geopy, Foursquare API, Folium, Django, MySQL",
             "Role": "Full-Stack Developer and Data Analyst",
             "GitHub Repo": "https://github.com/YogitaGami/Business-Location-Recommendation-System",
-            "Image": "/Location Recommendation Web Shot.png"
+            "Desktop Image": "/Desktop/Location Recommendation Web Shot.png",
+            "Mobile Image" : "/Mobile/Location%20Recommendation%20Web%20Shot.png"
           }
         },
         {
@@ -44,7 +46,8 @@
           "Technologies Used": " React.js, Vite, Tailwind CSS, Node.js, Express.js, Mongoose",
           "Role": "Full-Stack Developer",
           "GitHub Repo": "https://github.com/YogitaGami/Password-Manager",
-          "Image": "/Password Manager Web Shot.png"
+          "Desktop Image": "/Desktop/Password Manager Web Shot.png",
+          "Mobile Image" : "/Mobile/Password%20Manager%20Web%20Shot.png"
           }
         },
         {
@@ -54,7 +57,8 @@
           "Technologies Used": "React.js, Tailwind CSS, Local Storage",
           "Role": "Frontend Developer",
           "GitHub Repo": "[Link to GitHub]",
-          "Image": "/TodoList Web Shot.png"
+          "Desktop Image": "/Desktop/TodoList Web Shot.png",
+          "Mobile Image" : "/Mobile/TodoList%20Web%20Shot.png"
           }
         },
         {
@@ -64,7 +68,8 @@
           "Technologies Used": "HTML, CSS, JavaScript",
           "Role": "Frontend Developer",
           "GitHub Repo": "[Link to GitHub]",
-          "Image": "/Spotify Web Shot.png"
+          "Desktop Image": "/Desktop/Spotify Web Shot.png",
+          "Mobile Image" : "/Mobile/Spotify%20Web%20Shot.png"
           }
         },
         {
@@ -74,7 +79,8 @@
           "Technologies Used": "HTML, Tailwind CSS",
           "Role": "Frontend Developer",
           "GitHub Repo": "[Link to GitHub]",
-          "Image": "/Twitter Clone Web Shot.png"
+          "Desktop Image": "/Desktop/Twitter Clone Web Shot.png",
+          "Mobile Image" : "/Mobile/Twitter%20Clone%20Web%20Shot.png"
           }
         }
       ]

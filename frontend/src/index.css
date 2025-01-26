@@ -3,3 +3,6 @@
 @tailwind utilities; 
 
 
+:root{
+    --toastify-color-progress-light: #0ae9ec !important; /* Add your custom color */
+  }

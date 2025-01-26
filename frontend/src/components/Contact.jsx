@@ -4,20 +4,49 @@ import Heading from "./Heading";
 import location_icon from "../assets/image/location.svg"
 import phone_icon from "../assets/image/phone.svg"
 import mail_icon from "../assets/image/mail.svg"
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm();
   const onSubmit = async(data) =>{
-    let r= await fetch("http://localhost:3000/", {method: "POST",headers: { "Content-Type": "application/json" }, body: JSON.stringify(data)})
-    let res = await r.json()
-    console.log(res);
+    // let r= await fetch("http://localhost:3000/", {method: "POST",headers: { "Content-Type": "application/json" }, body: JSON.stringify(data)})
+    // let res = await r.json()
+    // console.log(res);
+    console.log(data)
+    reset()
+    toast("Password saved Successfully", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      className:"max-sm:!w-[11rem] max-sm:!max-h-[50px] max-sm:!min-h-[35px] max-sm:!text-[10px] !bg-gradient-to-br from-[#013c36] via-[#0180a7] to-black !text-[#0ffbfd] !top-20 sm:!top-8"
+      });
   } 
 
   return (
+    <>
+    <ToastContainer
+      position="top-center"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      toastClassName="!w-[10rem] !max-h-[50px] !min-h-[35px] !p-[1px] !text-[10px] !bg-gradient-to-br from-[#013c36] via-[#0180a7] to-black !text-[#0ffbfd] !top-20 sm:!top-8"
+      />
+    <ToastContainer />
     <section
       id="contact"
       className="relative min-h-fit bg-[#01393c] overflow-hidden"
@@ -86,7 +115,7 @@ const Contact = () => {
               type="submit"
               disabled={isSubmitting}
               value="Send Message"
-              className="max-sm:text-[10px] sm:text-xs md:text-sm text-base max-sm:mt-2 sm:mt-4 md:mt-6 lg:mt-8 px-1 sm:px-2 md:px-4 lg:px-6 py-1 sm:py-2 lg:py-3 bg-gradient-to-br from-[#013c36] via-[#0180a7] to-black text-[#0ffbfd] rounded-lg md:rounded-xl hover:border-[#0ffbfd] border-[1px] border-x-[#0ffbfd] border-y-[#00577e] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              className="max-sm:text-[10px] sm:text-xs md:text-sm text-base max-sm:mt-2 sm:mt-4 md:mt-6 lg:mt-8 px-2 md:px-4 lg:px-6 py-1 sm:py-2 lg:py-3 bg-gradient-to-br from-[#013c36] via-[#0180a7] to-black text-[#0ffbfd] rounded-lg md:rounded-xl hover:border-[#0ffbfd] border-[1px] border-x-[#0ffbfd] border-y-[#00577e] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
         </form>
@@ -115,6 +144,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

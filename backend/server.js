@@ -6,11 +6,26 @@ import dotenv from "dotenv"
 import message from "./model/portfolio_message.js"
 
 dotenv.config()
-let conn = mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log("Connected to MongoDB!");
+    app.listen(port, () => {
+      console.log(`Server running on port ${port}`);
+    });
+  })
+  .catch((err) => {
+    console.error("Failed to connect to MongoDB:", err.message);
+    process.exit(1);
+  });
 
 const app = express()
-const port = 3000
-app.use(cors())
+const port = process.env.PORT || 5000;
+app.use(cors(
+  {
+    origin: ['https://my-portfolio-5v76nmoc5-yogita-gamis-projects.vercel.app/'],
+    credentials: true,
+  }
+))
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
@@ -25,3 +40,4 @@ app.post('/', async(req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+

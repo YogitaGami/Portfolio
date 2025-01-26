@@ -70,20 +70,33 @@ const Projects = () => {
               {majorProjects.map((project, index) => {
                 const projectName = Object.keys(project)[0];
                 const projectDetails = project[projectName];
-                const Image = new URL(`${projectDetails.Image}`, import.meta.url).href;
+                const DesktopImage = projectDetails["Desktop Image"]
+                const MobileImage =  projectDetails["Mobile Image"]
+                console.log("mobile",MobileImage)
                 return (
                   <SwiperSlide key={index} className="relative group"
                   onMouseEnter={handleMouseEnter} // Pause autoplay on hover
                   onMouseLeave={handleMouseLeave}>
                      {/* Resume autoplay when hover ends */}
                     <div className="relative w-full h-96">
-                      <img
-                        src={Image}
-                        alt={projectName}
-                        className="w-full h-full rounded-lg object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                      />
+                      <picture>
+                        {/* Define mobile-first image */}
+                        <source
+                          media="(max-width: 568px)"
+                          srcSet={MobileImage}
+                          className="w-full h-full rounded-lg object-cover transition-transform duration-500 group-hover:scale-105"
+
+                        />
+                        {/* Fallback for larger screens */}
+                      
+                        <img
+                          src={DesktopImage}
+                          alt={projectName}
+                          className="w-full h-full rounded-lg object-fill lg:object-cover object-left-top transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </picture>
                       {/* Overlay Content */}
-                      <div className="absolute inset-0 bg-black bg-opacity-80 text-[#0180a7] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300 rounded-lg flex flex-col items-center justify-center p-4"
+                      <div className="absolute inset-0 bg-black bg-opacity-80 text-[#0180a7] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300 rounded-lg flex flex-col items-center justify-center text-center p-4"
                       >
                         <h3 className="text-base md:text-lg lg:text-xl font-semibold mb-0.5 md:mb-1 lg:mb-2">
                           {projectName}
