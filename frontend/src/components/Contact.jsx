@@ -15,10 +15,9 @@ const Contact = () => {
     formState: { errors, isSubmitting },
   } = useForm();
   const onSubmit = async(data) =>{
-    // let r= await fetch("http://localhost:3000/", {method: "POST",headers: { "Content-Type": "application/json" }, body: JSON.stringify(data)})
-    // let res = await r.json()
-    // console.log(res);
-    console.log(data)
+    let r= await fetch("https://portfolio-zc42.onrender.com", {method: "POST",headers: { "Content-Type": "application/json" }, body: JSON.stringify(data)})
+    let res = await r.json()
+    console.log(res);
     reset()
     toast("Password saved Successfully", {
       position: "top-center",
