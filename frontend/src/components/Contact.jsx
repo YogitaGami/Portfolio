@@ -29,7 +29,7 @@ const Contact = () => {
     let res = await r.json();
     console.log(res);
     reset();
-    toast("Password saved Successfully", {
+    toast("Message send Successfully", {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -56,7 +56,6 @@ const Contact = () => {
         pauseOnHover
         toastClassName="!w-[10rem] !max-h-[50px] !min-h-[35px] !p-[1px] !text-[10px] !bg-gradient-to-br from-[#013c36] via-[#0180a7] to-black !text-[#0ffbfd] !top-20 sm:!top-8"
       />
-      <ToastContainer />
       <section
         id="contact"
         className="relative min-h-fit bg-[#01393c] overflow-hidden"
