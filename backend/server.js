@@ -24,10 +24,14 @@ mongoose.connect(process.env.MONGO_URL)
 
 app.use(cors(
   {
-    origin: ['https://my-portfolio-5v76nmoc5-yogita-gamis-projects.vercel.app/'],
+    origin: ['http://localhost:5173', 'https://my-portfolio-5v76nmoc5-yogita-gamis-projects.vercel.app/'],
     credentials: true,
   }
 ))
+
+// Handling preflight requests (necessary for non-simple HTTP methods)
+app.options("*", cors());  // Respond to OPTIONS requests
+
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
