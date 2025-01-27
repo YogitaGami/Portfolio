@@ -24,7 +24,7 @@ mongoose.connect(process.env.MONGO_URL)
 
 app.use(cors(
   {
-    origin: ['http://localhost:5173', 'https://my-portfolio-5v76nmoc5-yogita-gamis-projects.vercel.app/'],
+    origin: ['http://localhost:5173', process.env.NODE_URL],
     credentials: true,
   }
 ))
