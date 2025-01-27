@@ -6,7 +6,11 @@ import dotenv from "dotenv"
 import message from "./model/portfolio_message.js"
 
 dotenv.config()
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+
+const app = express()
+const port = process.env.PORT || 5000;
+
+mongoose.connect(process.env.MONGO_URL)
   .then(() => {
     console.log("Connected to MongoDB!");
     app.listen(port, () => {
@@ -18,8 +22,6 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopol
     process.exit(1);
   });
 
-const app = express()
-const port = process.env.PORT || 5000;
 app.use(cors(
   {
     origin: ['https://my-portfolio-5v76nmoc5-yogita-gamis-projects.vercel.app/'],
@@ -37,7 +39,5 @@ app.post('/', async(req, res) => {
     const messageMe = await message.create(data)
     res.json(messageMe)
   })
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+
 
