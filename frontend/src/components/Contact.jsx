@@ -15,7 +15,7 @@ const Contact = () => {
     formState: { errors, isSubmitting },
   } = useForm();
   const onSubmit = async (data) => {
-    let backendUrl = process.env.REACT_APP_API_URL;
+    let backendUrl = import.meta.env.VITE_REACT_APP_API_URL;
 
     if (import.meta.env.MODE === "development") {
       backendUrl = "http://localhost:5000"; // Local backend server URL for development
