@@ -72,7 +72,6 @@ const Projects = () => {
                 const projectDetails = project[projectName];
                 const DesktopImage = projectDetails["Desktop Image"]
                 const MobileImage =  projectDetails["Mobile Image"]
-                console.log("mobile",MobileImage)
                 return (
                   <SwiperSlide key={index} className="relative group"
                   onMouseEnter={handleMouseEnter} // Pause autoplay on hover

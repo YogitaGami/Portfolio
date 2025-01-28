@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Heading from "./Heading";
 import location_icon from "../assets/image/location.svg";
-import phone_icon from "../assets/image/phone.svg";
+import linkedin_icon from "../assets/image/linkedin-in.svg";
 import mail_icon from "../assets/image/mail.svg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -27,7 +27,6 @@ const Contact = () => {
       body: JSON.stringify(data),
     });
     let res = await r.json();
-    console.log(res);
     reset();
     toast("Message send Successfully", {
       position: "top-center",
@@ -161,20 +160,6 @@ const Contact = () => {
             <div className="flex flex-row items-center gap-4 sm:gap-6 mb-2 sm:mb-4">
               <img
                 className="icon size-7 sm:size-9 p-1 border-[1px] sm:border-[3px] rounded-full border-cyan-300"
-                src={phone_icon}
-              ></img>
-              <div className="content">
-                <h3 className="heading text-lg md:text-xl lg:text-2xl pb-1">
-                  Phone Number
-                </h3>
-                <div className="info text-base md:text-lg">
-                  &#40;+91&#41; 9340102726
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row items-center gap-4 sm:gap-6 mb-2 sm:mb-4">
-              <img
-                className="icon size-7 sm:size-9 p-1 border-[1px] sm:border-[3px] rounded-full border-cyan-300"
                 src={mail_icon}
               ></img>
               <div className="content">
@@ -183,6 +168,20 @@ const Contact = () => {
                 </h3>
                 <div className="info text-base md:text-lg">
                   yogitagamimak@gmail.com
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row items-center gap-4 sm:gap-6 mb-2 sm:mb-4">
+              <img
+                className="icon size-7 sm:size-9 p-1 border-[1px] sm:border-[3px] rounded-full border-cyan-300"
+                src={linkedin_icon}
+              ></img>
+              <div className="content">
+                <h3 className="heading text-lg md:text-xl lg:text-2xl pb-1">
+                  Linkedin Profile
+                </h3>
+                <div className="info text-base md:text-lg">
+                  linkedin.com/in/yogita-gami257
                 </div>
               </div>
             </div>

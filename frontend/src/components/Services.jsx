@@ -70,7 +70,6 @@ const Services = () => {
       <div className="relative m-auto grid grid-cols-2 md:grid-cols-custom grid-rows-3 md:grid-rows-custom lg:gap-5 md:gap-2 gap-4 sm:w-[22.8rem] max-sm:w-[16rem] justify-center">
         {servicesData.map((service) => {
           const imageUrl = `${service.image}`;
-          console.log(imageUrl)
 
           return (
           <div
